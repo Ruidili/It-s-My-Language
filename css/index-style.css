@@ -1,0 +1,86 @@
+* { box-sizing: border-box; }
+h1 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+img {
+	image-orientation: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	height: 60%;
+}
+
+
+body {
+	background: white;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.container {
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.viewmaster {
+	position: relative;
+	display: block;
+	background: #0a0a0a;
+	border-radius: 25px;
+	margin: 50px 0;
+	padding: 50px 0;
+	z-index: 1;
+}
+
+.carousel-cell {
+	width: 50%;
+	height: 500px;
+	margin-right: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: black;
+	background: linear-gradient(rgb(255,228,196), rgb(255,228,196)), url('http://orig15.deviantart.net/7604/f/2011/205/2/9/texture_old_640x480_by_bluezircon_graphics-d41jn8n.jpg');
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: .5;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+	z-index: 99;
+	&:before {
+		position: absolute;
+		content: '';
+		width: 96%;
+		border: 8px dashed white;
+		top: -30px;
+		z-index: 999999;
+		overflow: visible !important;
+	}
+	&:after {
+		position: absolute;
+		content: '';
+		width: 96%;
+		border: 8px dashed white;
+		bottom: -30px;
+		z-index: 99999999;
+		overflow: visible !important;
+	}
+}
+
+.is-selected {
+	opacity: 1;
+	background: linear-gradient(rgb(	255,228,196), rgb(255,228,196)), url('http://orig15.deviantart.net/7604/f/2011/205/2/9/texture_old_640x480_by_bluezircon_graphics-d41jn8n.jpg');
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.carousel-content {
+	width: 100%;
+	padding: 0 50px;
+	line-height: 2;
+}
